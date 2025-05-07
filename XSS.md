@@ -14,3 +14,11 @@ The goal was to trigger a pop-up alert using a simple XSS payload.
    I injected the following XSS payload in the input field to trigger a pop-up alert:
    ```html
    <script>alert('XSS triggered');</script>
+Execute Payload:
+After submitting the form, the payload executed, and I saw the pop-up alert, confirming the vulnerability.
+
+Analysis:
+This demonstrated that DVWA was vulnerable to reflected XSS attacks, allowing an attacker to execute arbitrary JavaScript in the context of the user's browser.
+
+Conclusion
+XSS is a common vulnerability in web applications that can be exploited to steal cookies, session tokens, or perform malicious actions on behalf of users. Always sanitize user inputs and apply proper escaping techniques.
